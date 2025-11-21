@@ -136,10 +136,27 @@ fun Argon2Screen(viewModel: Argon2ViewModel = viewModel()) {
                     ),
                     modifier = Modifier.weight(1f)
                 )
+            }
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
                 TextField(
                     value = config.iterations,
                     onValueChange = { viewModel.updateConfig(config.copy(iterations = it)) },
                     label = { Text(stringResource(R.string.label_iteration_count)) },
+                    singleLine = true,
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Number,
+                        imeAction = ImeAction.Done,
+                        autoCorrect = false,
+                    ),
+                    modifier = Modifier.weight(1f)
+                )
+
+                TextField(
+                    value = config.length,
+                    onValueChange = { viewModel.updateConfig(config.copy(length = it)) },
+                    label = { Text(stringResource(R.string.label_length)) },
                     singleLine = true,
                     keyboardOptions = KeyboardOptions(
                         keyboardType = KeyboardType.Number,

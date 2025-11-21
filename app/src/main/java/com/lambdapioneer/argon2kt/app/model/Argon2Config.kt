@@ -10,5 +10,6 @@ data class Argon2Config(
     val memory: String = "12",   // 2^N
     val parallelism: String = "2",
     val mode: Argon2Mode = Argon2Mode.ARGON2_ID,
-    val version: Argon2Version = Argon2Version.V13
+    val version: Argon2Version = Argon2Version.V13,
+    val length: String = "32"
 )

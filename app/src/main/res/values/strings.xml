@@ -17,6 +17,7 @@
     <string name="label_memory">Memory (2^N)</string>
     <string name="label_output_hash">Hash (Hex)</string>
     <string name="label_output_encoded">Encoded Argon2 String</string>
+    <string name="label_length">Length</string>
 
     <!-- Info / Feedback -->
     <string name="wall_time">Elapsed time: %d ms ✨</string>
@@ -26,4 +27,5 @@
     <string name="error_memory_invalid">Memory must be a positive number (in KiB)</string>
     <string name="error_parallelism_invalid">Parallelism must be a positive number</string>
     <string name="error_iterations_invalid">Iterations must be a positive number</string>
+    <string name="error_length_invalid">Length must be a positive number</string>
 </resources>

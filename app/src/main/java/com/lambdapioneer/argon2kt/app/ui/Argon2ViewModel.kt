@@ -56,6 +56,11 @@ class Argon2ViewModel : ViewModel() {
             errors += context.getString(R.string.error_iterations_invalid)
         }
 
+        val lengthInt = _config.value.length.toIntOrNull()
+        if (lengthInt == null || lengthInt <= 0) {
+            errors += context.getString(R.string.error_length_invalid)
+        }
+
         if (errors.isNotEmpty()) throw IllegalArgumentException(errors.joinToString("\n"))
     }
 
@@ -78,7 +83,8 @@ class Argon2ViewModel : ViewModel() {
                     tCostInIterations = params.iterations.toInt(),
                     mCostInKibibyte = 1 shl params.memory.toInt(),
                     parallelism = params.parallelism.toInt(),
-                    version = params.version
+                    version = params.version,
+                    hashLengthInBytes = params.length.toInt()
                 )
 
                 val end = System.nanoTime()
