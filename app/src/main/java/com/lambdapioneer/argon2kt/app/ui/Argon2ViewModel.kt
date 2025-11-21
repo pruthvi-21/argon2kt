@@ -31,6 +31,7 @@ class Argon2ViewModel : ViewModel() {
     fun calculateHash(context: Context) {
         viewModelScope.launch {
             _isLoading.value = true
+            _result.value = null // to clear previous output
             _result.value = runArgon2(context, _config.value)
             _isLoading.value = false
         }
