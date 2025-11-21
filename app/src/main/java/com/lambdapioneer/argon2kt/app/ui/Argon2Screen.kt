@@ -122,7 +122,7 @@ fun Argon2Screen(viewModel: Argon2ViewModel = viewModel()) {
                         imeAction = ImeAction.Done,
                         autoCorrect = false,
                     ),
-                    modifier = Modifier.weight(6f)
+                    modifier = Modifier.weight(1f)
                 )
                 TextField(
                     value = config.parallelism,
@@ -134,7 +134,7 @@ fun Argon2Screen(viewModel: Argon2ViewModel = viewModel()) {
                         imeAction = ImeAction.Done,
                         autoCorrect = false,
                     ),
-                    modifier = Modifier.weight(4f)
+                    modifier = Modifier.weight(1f)
                 )
                 TextField(
                     value = config.iterations,
@@ -146,7 +146,7 @@ fun Argon2Screen(viewModel: Argon2ViewModel = viewModel()) {
                         imeAction = ImeAction.Done,
                         autoCorrect = false,
                     ),
-                    modifier = Modifier.weight(4f)
+                    modifier = Modifier.weight(1f)
                 )
             }
 

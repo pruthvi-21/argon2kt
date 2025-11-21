@@ -76,7 +76,7 @@ class Argon2ViewModel : ViewModel() {
                     password = params.password.toByteArray(),
                     salt = params.salt.toByteArray(),
                     tCostInIterations = params.iterations.toInt(),
-                    mCostInKibibyte = params.memory.toInt(),
+                    mCostInKibibyte = 1 shl params.memory.toInt(),
                     parallelism = params.parallelism.toInt(),
                     version = params.version
                 )

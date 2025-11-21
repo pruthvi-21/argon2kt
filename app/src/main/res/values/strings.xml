@@ -14,7 +14,7 @@
     <string name="label_password">Password (Raw / UTF-8)</string>
     <string name="label_parallelism_count">Parallelism</string>
     <string name="label_iteration_count">Iterations</string>
-    <string name="label_memory">Memory (KiB)</string>
+    <string name="label_memory">Memory (2^N)</string>
     <string name="label_output_hash">Hash (Hex)</string>
     <string name="label_output_encoded">Encoded Argon2 String</string>
 

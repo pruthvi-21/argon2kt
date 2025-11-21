@@ -7,7 +7,7 @@ data class Argon2Config(
     val password: String = "",
     val salt: String = "",
     val iterations: String = "2",
-    val memory: String = "65536",   // in KiB
+    val memory: String = "12",   // 2^N
     val parallelism: String = "2",
     val mode: Argon2Mode = Argon2Mode.ARGON2_ID,
     val version: Argon2Version = Argon2Version.V13
